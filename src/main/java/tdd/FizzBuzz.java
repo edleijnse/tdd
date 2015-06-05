@@ -40,10 +40,13 @@ public class FizzBuzz {
 		return Integer.toString(intNextNumber);
 	}
 	
-	public void createFizzBuzz(){
-		for (int ii=0; ii<100;ii++){
+	public String[] createFizzBuzz(int maxCount){
+		String[] myStrings = new String[maxCount];
+		for (int ii=0; ii<maxCount;ii++){
+			myStrings[ii]=nextNumber(ii);
 			System.out.println(nextNumber(ii));
 		}
+		return myStrings;
 		
 	}
 
