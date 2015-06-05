@@ -79,7 +79,7 @@ public class FizzBuzzTest {
 	}
 
 	@Test
-	public void createFizzBuzzWhen3ThenReturn3() {
+	public void createFizzBuzzWhenPredictedThenCheckResult() {
 		final FizzBuzz testee = new FizzBuzz();
 
 		
