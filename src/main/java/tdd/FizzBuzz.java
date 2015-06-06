@@ -1,14 +1,22 @@
 package tdd;
 
 public class FizzBuzz {
+	
+	private boolean dividable(int inValue, int divider){
+		int resultDivide = inValue / divider;
+		int resultMultiply = resultDivide * 3;
+		if (resultMultiply == inValue){
+			return true;
+		}
+		
+		return false;
+		
+	}
 
 	public String nextNumber(int i) {
 		i++;
         int intNextNumber = i;
-        int resultDivide3 = intNextNumber / 3;
-        int resultMultiply3 = resultDivide3 * 3;
-        int resultDivide5 = intNextNumber / 5;
-        int resultMultiply5 = resultDivide5 * 5;
+        
         boolean dividable3 = false;
         boolean dividable5 = false;
         
@@ -19,12 +27,10 @@ public class FizzBuzz {
         if (myNextNumber.contains("5")){
         	return "Buzz";
         }
-      
-        if (intNextNumber == resultMultiply3){
+        if (dividable(intNextNumber,3)) {
         	dividable3 = true;
         }
-        
-        if (intNextNumber == resultMultiply5){
+        if (dividable(intNextNumber,5)) {
         	dividable5 = true;
         }
         if (dividable3 && dividable5){
