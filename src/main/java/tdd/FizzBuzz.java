@@ -4,7 +4,7 @@ public class FizzBuzz {
 	
 	private boolean dividable(int inValue, int divider){
 		int resultDivide = inValue / divider;
-		int resultMultiply = resultDivide * 3;
+		int resultMultiply = resultDivide * divider;
 		if (resultMultiply == inValue){
 			return true;
 		}
